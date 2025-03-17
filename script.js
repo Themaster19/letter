@@ -5,7 +5,7 @@ let tablet_media_query = window.matchMedia(
 const notes = document.querySelectorAll(".js-note");
 
 
-function recize_notes() {
+function resize_notes() {
   for (let i = 0; i < notes.length; i++) {
     if (notes[i].classList.contains("active")) {
       notes[i].classList.remove("active");
@@ -148,5 +148,5 @@ function sticker() {
 document.querySelector(".js-sticker").addEventListener("click", sticker);
 
 window.onresize = function (event) {
-  recize_notes();
+  resize_notes();
 };
