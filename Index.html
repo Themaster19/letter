@@ -2,30 +2,39 @@
 <html lang="en"> 
 <head>
 <meta charset="UTF-8"> 
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-<title> CSS ENvelope + Letter (Open/Close on click) </title> 
+<title> Love Letters </title> 
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sofia'>
 <link rel="stylesheet" href="./style.css"> 
 </head>
-<body>
-  <div class="container"> 
-    <div class="envelope"> 
-      <div class="letter"> 
-        <div class="text">
-          <strong> Dear lover. </strong>
-          <p> 
-            Thank you for loving me and giving me hope that i'll always be around to do the same. 
-          </p>
+<body class="scissors">
+
+  <div class="envelop"> 
+    <div class="envelop__front-paper"></div>
+    <div class="envelop__back-paper"></div>
+    <div class="envelop__up-paper js-up-paper"></div>
+    <div class="envelop__sticker js-sticker"></div>
+    <div class="envelop__false-sticker"></div>
+    <div class="envelop__content js-envelop-content"> 
+      <div class="love-notes">
+        <div class="note js-note">
+          <div class="note__text"> 
+            <p>
+              To my love, you are like a million stars wrapped in a cloth nobody can touch
+            </p>
+          </div>
+        </div>
+        <div class="note js-note">
+        <div class="note__text"> 
+        <p> Nobody could compare to the way you love and care for me </p>
+        <p> I hope we last a lifetime and maybe even more then that princess </p>
+        </div>
         </div>
       </div>
     </div>
-    <div class="heart"></div>
   </div>
-</div> 
-  <script> 
-  const envelope = document.querySelector(".envelope-wrapper'); 
-  envelope.addEventListener('click', () => {
-    envelope.classList.toggle('flap'); 
-  }}; 
-</script>
+
+  <scrip> src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></scrip>
+  <script> src="./script.js></script>
+  
 </body>
 </html>
