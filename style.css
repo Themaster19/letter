@@ -103,11 +103,7 @@ body {
     height: 15%; 
     } 
   } 
-@media (max-width: 400px) {
-  .envelop__sticker {
-    height: 15%;
-  }
-}
+
 .envelop__false-sticker {
   width: 20%;
   height: 205;
