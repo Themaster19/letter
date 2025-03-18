@@ -77,7 +77,7 @@ body {
   bottom: 0;
   left: 0; 
   position: relative:
-  border-radius: 0.7rem; 
+  border-radius: 0.7rem;
   background-color: #191970;
   z-index: 400; 
   clip-path: polygon(0% 0%, 100% 0%, 50% 81%); 
