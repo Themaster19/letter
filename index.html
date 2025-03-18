@@ -1,96 +1,103 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"/> 
-<title> Love Letters </title> 
+<meta charset="UTF-8"/>
+<title> Love Letters </title>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Sofia'/>
-<link rel="stylesheet" href="./style.css"> 
-<style> 
-
+<link rel="stylesheet" href="./style.css">
+<style>
 * {
-  padding: 0; 
-  margin: 0; 
-  box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html, 
+html,
 body {
   height: 100%;
 }
 
 body {
   width: 100%;
-  background-color: #000; 
-  font-size: 20px; 
-  display: flex; 
-  justify-content: center: 
+  background-color: #000;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-@media ( max-height: 500px) {
+
+@media (max-height: 500px) {
   body {
     margin: 25% 0 25% 0;
- }
+  }
 }
 
 .envelop {
   width: 15rem;
   height: 10rem;
   position: absolute;
-  left: 0; 
+  left: 0;
   right: 0;
   margin: auto;
 }
+
 @media (min-width: 400px) and (max-width: 600px) {
   .envelop {
-  width: 25rem; 
-  height: 15rem;
-}
+    width: 25rem;
+    height: 15rem;
   }
+}
+
 @media (min-width: 600px) {
   .envelop {
     width: 20rem;
-    height: 20rem; 
+    height: 20rem;
   }
 }
+
 @media (min-width: 600px) and (min-height: 600px) {
-  .envelop { 
-    bottom: 20%; 
-     }
-  } 
-.envelop__front-paper {
-  width: 100%; 
-  height: 100%;
-  bottom: 0; 
-  left: 0; 
-  position: absolute;
-  border-radius: 0.7rem;
-  border: 0.35rem solid #191970; 
-  background-color: #191970;
-  clip-path: polygon(100% 0%, 50% 70%, 0% 0%, 0% 100%, 100% 100%); 
-  z-index: 300; 
+  .envelop {
+    bottom: 20%;
+  }
 }
-.envelop__back-paper {
+
+.envelop__front-paper {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   bottom: 0;
   left: 0;
   position: absolute;
-  border-radius: 0.7rem; 
-  background-color: #191970; 
-  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0 90%); 
+  border-radius: 0.7rem;
+  border: 0.35rem solid #191970;
+  background-color: #191970;
+  clip-path: polygon(100% 0%, 50% 70%, 0% 0%, 0% 100%, 100% 100%);
+  z-index: 300;
+}
+
+.envelop__back-paper {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.7rem;
+  background-color: #191970;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0 90%);
   z-index: 100;
 }
+
 .envelop__up-paper {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   bottom: 0;
-  left: 0; 
+  left: 0;
   position: relative;
   border-radius: 0.7rem;
   background-color: #191970;
-  z-index: 400; 
-  clip-path: polygon(0% 0%, 100% 0%, 50% 81%); 
+  z-index: 400;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 81%);
 }
+
 .envelop__sticker {
   width: 100%;
   height: 20%;
@@ -100,298 +107,284 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 400; 
+  z-index: 400;
   background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
-  background-color:  #AFF1ED; 
+  background-color: #AFF1ED;
   border: 0.3rem solid #4E80AB;
   background-size: 2rem;
-  background-position: center; 
+  background-position: center;
 }
-@media (max-width: 400px) { 
-  .evelop__sticker { 
-    height: 15%; 
-    } 
-  } 
+
+@media (max-width: 400px) {
+  .envelop__sticker {
+    height: 15%;
+  }
+}
 
 .envelop__false-sticker {
   width: 20%;
-  height: 205;
+  height: 20%;
   position: absolute;
-  margin: auto; 
+  margin: auto;
   top: 30%;
   left: 80%;
   bottom: 0;
-  right:0;
-  z-index: 300; 
+  right: 0;
+  z-index: 300;
   background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
-  background-color: #ADD8E6; 
-  border: 0.3rem solid #4E80AB; 
-  background-size: 2rem; 
+  background-color: #ADD8E6;
+  border: 0.3rem solid #4E80AB;
+  background-size: 2rem;
   background-position: center;
 }
+
 @media (max-width: 400px) {
   .envelop__false-sticker {
     background-size: 1.2rem;
   }
 }
-@media (min-width: 400px) {   
+
+@media (min-width: 400px) {
   .envelop__false-sticker {
-  height: 15%;
+    height: 15%;
   }
 }
+
 .envelop__content {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   bottom: 0;
-  left: 0; 
+  left: 0;
   position: absolute;
   z-index: 200;
 }
 
-.love-notes { 
-  width: 100%; 
-  height: 100%; 
-  display: flex; 
-  flex-directions: column; 
-  align-items: center; 
-  }
+.love-notes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .note {
-  width: 95%; 
+  width: 95%;
   height: 30%;
-  background-color: #174F6F; 
+  background-color: #174F6F;
   position: absolute;
-  overflow: hidden; 
+  overflow: hidden;
   transition: height 0.5s, opacity 0.25s;
-  box-shadow: 0px 0px 5px 0px rgba(137, 207, 240); 
+  box-shadow: 0px 0px 5px 0px rgba(137, 207, 240);
 }
+
 .note:nth-child(1) {
-bottom: 60%; 
-} 
-.note:nth-child(2) { 
-bottom: 40%; 
-} 
+  bottom: 60%;
+}
+
+.note:nth-child(2) {
+  bottom: 40%;
+}
+
 .note:nth-child(3) {
-bottom: 20%; 
-} 
+  bottom: 20%;
+}
+
 .note:hover {
-  cursor: pointer; 
-  height: 45%; 
-  } 
-.note__text { 
-font-family: "Sofia"; 
-padding: 1rem;
-} 
-.note__text p { 
-font-size: 0.9rem; 
-margin-bottom: 1rem;
-text-align: center; 
+  cursor: pointer;
+  height: 45%;
 }
+
+.note__text {
+  font-family: "Sofia";
+  padding: 1rem;
+}
+
+.note__text p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 @media (min-width: 300px) and (max-width: 600px) {
-.note__text p { 
-font-size: 1.025rem; 
- }
+  .note__text p {
+    font-size: 1.025rem;
+  }
 }
-@media (min-width: 600px) { 
-.note__text p { 
-font-size: 1.15rem;
- }
-} 
 
-.scissors { 
-cursor: url("https://i.postimg.cc/GtLCdKxR/sisors.png"), pointer;
+@media (min-width: 600px) {
+  .note__text p {
+    font-size: 1.15rem;
+  }
 }
-.scissors:active { 
-cursor:  url("https://i.postimg.cc/GtXQ7WPZ/pngwing-com.png"), pointer;
-} 
 
-.cursor { 
-  cursor: pointer; 
-} 
-</style> 
+.scissors {
+  cursor: url("https://i.postimg.cc/GtLCdKxR/sisors.png"), pointer;
+}
+
+.scissors:active {
+  cursor: url("https://i.postimg.cc/GtXQ7WPZ/pngwing-com.png"), pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
+</style>
 </head>
 <body class="scissors">
-
-  <div class="envelop"> 
+  <div class="envelop">
     <div class="envelop__front-paper"></div>
     <div class="envelop__back-paper"></div>
     <div class="envelop__up-paper js-up-paper"></div>
     <div class="envelop__sticker js-sticker"></div>
     <div class="envelop__false-sticker"></div>
-    <div class="envelop__content js-envelop-content"> 
+    <div class="envelop__content js-envelop-content">
       <div class="love-notes">
         <div class="note js-note">
-          <div class="note__text"> 
-            <p>
-              To my love, you are like a million stars wrapped in a cloth nobody can touch
-            </p>
+          <div class="note__text">
+            <p>To my love, you are like a million stars wrapped in a cloth nobody can touch</p>
           </div>
         </div>
         <div class="note js-note">
-        <div class="note__text"> 
-        <p> Nobody could compare to the way you love and care for me </p>
-        <p> I hope we last a lifetime and maybe even more then that princess </p>
-        </div>
+          <div class="note__text">
+            <p>Nobody could compare to the way you love and care for me</p>
+            <p>I hope we last a lifetime and maybe even more than that, princess</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
-  <script> 
-let mobile_media_query = window.matchMedia("(max-width: 400px)");
-let tablet_media_query = window.matchMedia(
-  "(min-width: 400px) and (max-width: 600px)"
-);
-const notes = document.querySelectorAll(".js-note");
+  <script>
+    let mobile_media_query = window.matchMedia("(max-width: 400px)");
+    let tablet_media_query = window.matchMedia("(min-width: 400px) and (max-width: 600px)");
+    const notes = document.querySelectorAll(".js-note");
 
-
-function resize_notes() {
-  for (let i = 0; i < notes.length; i++) {
-    if (notes[i].classList.contains("active")) {
-      notes[i].classList.remove("active");
-      gsap.set(notes[i], {
-        height: "30%",
-        clearProps: "all"
-      });
-    }
-  }
-}
-
-function notes_ready() {
-  gsap.to(".js-envelop-content", {
-    height: "110%",
-    duration: 0.5
-  });
-
-  for (let i = 0; i < notes.length; i++) {
-    notes[i].addEventListener("click", function () {
-      if (mobile_media_query.matches) {
-        if (this.classList.contains("active")) {
-          this.classList.remove("active");
-          gsap.set(this, {
+    function resize_notes() {
+      for (let i = 0; i < notes.length; i++) {
+        if (notes[i].classList.contains("active")) {
+          notes[i].classList.remove("active");
+          gsap.set(notes[i], {
             height: "30%",
             clearProps: "all"
-          });
-        } else {
-          for (let i = 0; i < notes.length; i++) {
-            if (notes[i].classList.contains("active")) {
-              notes[i].classList.remove("active");
-              gsap.set(notes[i], {
-                height: "30%",
-                clearProps: "all"
-              });
-            }
-          }
-          this.classList.add("active");
-          gsap.set(this, {
-            height: 125 + 40 * i + "%"
-          });
-        }
-      } else if (tablet_media_query.matches) {
-        if (this.classList.contains("active")) {
-          this.classList.remove("active");
-          gsap.set(this, {
-            height: "30%",
-            clearProps: "all"
-          });
-        } else {
-          for (let i = 0; i < notes.length; i++) {
-            if (notes[i].classList.contains("active")) {
-              notes[i].classList.remove("active");
-              gsap.set(notes[i], {
-                height: "30%",
-                clearProps: "all"
-              });
-            }
-          }
-          this.classList.add("active");
-          gsap.set(this, {
-            height: 80 + 21 * i + "%"
-          });
-        }
-      } else {
-        if (this.classList.contains("active")) {
-          this.classList.remove("active");
-          gsap.set(this, {
-            height: "30%",
-            clearProps: "all"
-          });
-        } else {
-          for (let i = 0; i < notes.length; i++) {
-            if (notes[i].classList.contains("active")) {
-              notes[i].classList.remove("active");
-              gsap.set(notes[i], {
-                height: "30%",
-                clearProps: "all"
-              });
-            }
-          }
-          this.classList.add("active");
-          gsap.set(this, {
-            height: 70 + 20 * i + "%"
           });
         }
       }
-    });
-  }
-}
+    }
 
- 
-function set_up_paper() {
-  var arr = [0, 0, 100, 0, 50, 61];
-  gsap.set(".js-up-paper", {
-    bottom: "97%",
-    rotation: 180,
-    zIndex: 200,
-    clipPath:
-      "polygon(" +
-      arr[0] +
-      "%" +
-      arr[1] +
-      "%," +
-      arr[2] +
-      "%" +
-      arr[3] +
-      "%," +
-      arr[4] +
-      "%" +
-      arr[5] +
-      "%)",
-    onComplete: notes_ready
-  });
-}
+    function notes_ready() {
+      gsap.to(".js-envelop-content", {
+        height: "110%",
+        duration: 0.5
+      });
 
+      for (let i = 0; i < notes.length; i++) {
+        notes[i].addEventListener("click", function () {
+          if (mobile_media_query.matches) {
+            if (this.classList.contains("active")) {
+              this.classList.remove("active");
+              gsap.set(this, {
+                height: "30%",
+                clearProps: "all"
+              });
+            } else {
+              for (let i = 0; i < notes.length; i++) {
+                if (notes[i].classList.contains("active")) {
+                  notes[i].classList.remove("active");
+                  gsap.set(notes[i], {
+                    height: "30%",
+                    clearProps: "all"
+                  });
+                }
+              }
+              this.classList.add("active");
+              gsap.set(this, {
+                height: 125 + 40 * i + "%"
+              });
+            }
+          } else if (tablet_media_query.matches) {
+            if (this.classList.contains("active")) {
+              this.classList.remove("active");
+              gsap.set(this, {
+                height: "30%",
+                clearProps: "all"
+              });
+            } else {
+              for (let i = 0; i < notes.length; i++) {
+                if (notes[i].classList.contains("active")) {
+                  notes[i].classList.remove("active");
+                  gsap.set(notes[i], {
+                    height: "30%",
+                    clearProps: "all"
+                  });
+                }
+              }
+              this.classList.add("active");
+              gsap.set(this, {
+                height: 80 + 21 * i + "%"
+              });
+            }
+          } else {
+            if (this.classList.contains("active")) {
+              this.classList.remove("active");
+              gsap.set(this, {
+                height: "30%",
+                clearProps: "all"
+              });
+            } else {
+              for (let i = 0; i < notes.length; i++) {
+                if (notes[i].classList.contains("active")) {
+                  notes[i].classList.remove("active");
+                  gsap.set(notes[i], {
+                    height: "30%",
+                    clearProps: "all"
+                  });
+                }
+              }
+              this.classList.add("active");
+              gsap.set(this, {
+                height: 70 + 20 * i + "%"
+              });
+            }
+          }
+        });
+      }
+    }
 
-function envelop_transition() {
-  gsap.to(".js-up-paper", {
-    bottom: "1%",
-    duration: 0.25,
-    onComplete: set_up_paper
-  });
-  document
-    .querySelector(".js-up-paper")
-    .removeEventListener("click", envelop_transition);
-  document.querySelector(".js-up-paper").classList.remove("cursor");
-}
+    function set_up_paper() {
+      var arr = [0, 0, 100, 0, 50, 61];
+      gsap.set(".js-up-paper", {
+        bottom: "97%",
+        rotation: 180,
+        zIndex: 200,
+        clipPath: "polygon(" + arr[0] + "%" + arr[1] + "%," + arr[2] + "%" + arr[3] + "%," + arr[4] + "%" + arr[5] + "%)",
+        onComplete: notes_ready
+      });
+    }
 
+    function envelop_transition() {
+      gsap.to(".js-up-paper", {
+        bottom: "1%",
+        duration: 0.25,
+        onComplete: set_up_paper
+      });
+      document.querySelector(".js-up-paper").removeEventListener("click", envelop_transition);
+      document.querySelector(".js-up-paper").classList.remove("cursor");
+    }
 
-function sticker() {
-  gsap.set(".js-sticker", { width: "20%", left: "-80%" });
-  document.body.classList.remove("scissors");
-  document.querySelector(".js-sticker").removeEventListener("click", sticker);
-  document
-    .querySelector(".js-up-paper")
-    .addEventListener("click", envelop_transition);
-  document.querySelector(".js-up-paper").classList.add("cursor");
-}
+    function sticker() {
+      gsap.set(".js-sticker", { width: "20%", left: "-80%" });
+      document.body.classList.remove("scissors");
+      document.querySelector(".js-sticker").removeEventListener("click", sticker);
+      document.querySelector(".js-up-paper").addEventListener("click", envelop_transition);
+      document.querySelector(".js-up-paper").classList.add("cursor");
+    }
 
-document.querySelector(".js-sticker").addEventListener("click", sticker);
+    document.querySelector(".js-sticker").addEventListener("click", sticker);
 
-window.onresize = function (event) {
-  resize_notes();
-};
-</script> 
-  
+    window.onresize = function (event) {
+      resize_notes();
+    };
+  </script>
 </body>
 </html>
